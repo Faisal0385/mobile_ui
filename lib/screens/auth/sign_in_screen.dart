@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_ui/screens/auth/sign_up_screen.dart';
+import 'package:mobile_ui/screens/home_screen/home_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -39,7 +40,10 @@ class _SignInScreenState extends State<SignInScreen> {
 
   Widget SubmitButton() {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) =>
+            HomeScreen()), (Route<dynamic> route) => false);
+      },
       child: const Text('Submit'),
     );
   }

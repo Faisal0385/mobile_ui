@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_ui/screens/cart_screen/cart_screen.dart';
+import 'package:mobile_ui/screens/home_screen/home_screen.dart';
+import 'package:mobile_ui/screens/product_details_screen/product_details_screen.dart';
 import '/screens/auth/sign_in_screen.dart';
 
 void main() {
@@ -12,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const SignInScreen(),
+      home: const CartScreen(),
     );
   }
 }
